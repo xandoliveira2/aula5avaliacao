@@ -18,3 +18,10 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest test_main.py
+    - name: Package project
+      run: zip -r fatorial.zip .
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: artefato-fa(6)aaaaaatorial
+        path: fatorial.zip
